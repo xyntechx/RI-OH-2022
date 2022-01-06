@@ -23,32 +23,44 @@ const Play: NextPage = () => {
                 <h1 className={styles.title}>Choose a Game</h1>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
-                        <Image
-                            src={astronaut}
-                            width={250}
-                            height={250}
-                            className={styles.img}
-                        />
+                        <Link href="https://ohgames.herokuapp.com/mem">
+                            <a target="_blank">
+                                <Image
+                                    src={astronaut}
+                                    width={250}
+                                    height={250}
+                                    className={styles.img}
+                                />
+                            </a>
+                        </Link>
                         <span className={styles.tooltiptext}>Memory</span>
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Image
-                            src={alien}
-                            width={250}
-                            height={250}
-                            className={styles.img}
-                        />
+                        <Link href="https://ohgames.herokuapp.com/tap">
+                            <a target="_blank">
+                                <Image
+                                    src={alien}
+                                    width={250}
+                                    height={250}
+                                    className={styles.img}
+                                />
+                            </a>
+                        </Link>
                         <span className={styles.tooltiptext}>TapTap</span>
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Image
-                            src={rocket}
-                            width={250}
-                            height={250}
-                            className={styles.img}
-                        />
+                        <Link href="https://ohgames.herokuapp.com/jig">
+                            <a target="_blank">
+                                <Image
+                                    src={rocket}
+                                    width={250}
+                                    height={250}
+                                    className={styles.img}
+                                />
+                            </a>
+                        </Link>
                         <span className={styles.tooltiptext}>Jigsaw</span>
                     </div>
                 </div>
