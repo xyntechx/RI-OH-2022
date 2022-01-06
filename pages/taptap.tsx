@@ -5,7 +5,9 @@ import styles from "../styles/Home.module.css";
 
 const TapTap: NextPage = () => {
     return (
-        <iframe src="/taptap/index.html" width="100%" height="100%"></iframe>
+        <div>
+            <p>TapTap</p>
+        </div>
     );
 };
 

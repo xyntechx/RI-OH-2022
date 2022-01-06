@@ -5,7 +5,9 @@ import styles from "../styles/Home.module.css";
 
 const Memory: NextPage = () => {
     return (
-        <iframe src="/memory/index.html" width="100%" height="100%"></iframe>
+        <div>
+            <p>Memory</p>
+        </div>
     );
 };
 

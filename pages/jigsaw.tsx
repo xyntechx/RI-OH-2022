@@ -5,7 +5,9 @@ import styles from "../styles/Home.module.css";
 
 const Jigsaw: NextPage = () => {
     return (
-        <iframe src="/jigsaw/index.html" width="100%" height="100%"></iframe>
+        <div>
+            <p>Jigsaw</p>
+        </div>
     );
 };
 
