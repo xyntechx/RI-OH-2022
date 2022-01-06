@@ -16,13 +16,13 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Image src="/bg.png" alt="test" layout="fill" />
+            <Image src="/bg.png" alt="Earth Background" layout="fill" />
 
             <main className={styles.main}>
                 <h1 className={styles.title}>Ready to Play Some Games?</h1>
                 <br />
                 <Link href="/play">
-                    <a className={styles.button}>Let's Go</a>
+                    <a className={styles.button}>Let&apos;s Go</a>
                 </Link>
                 <Link href="/help">
                     <a className={styles.button}>

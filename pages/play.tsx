@@ -27,6 +27,7 @@ const Play: NextPage = () => {
                             <a target="_blank">
                                 <Image
                                     src={astronaut}
+                                    alt="Astronaut"
                                     width={250}
                                     height={250}
                                     className={styles.img}
@@ -41,6 +42,7 @@ const Play: NextPage = () => {
                             <a target="_blank">
                                 <Image
                                     src={alien}
+                                    alt="Alien"
                                     width={250}
                                     height={250}
                                     className={styles.img}
@@ -55,6 +57,7 @@ const Play: NextPage = () => {
                             <a target="_blank">
                                 <Image
                                     src={rocket}
+                                    alt="Rocket"
                                     width={250}
                                     height={250}
                                     className={styles.img}
