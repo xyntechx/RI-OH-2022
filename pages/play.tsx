@@ -6,8 +6,33 @@ import styles from "../styles/Home.module.css";
 import alien from "../public/alien.png";
 import astronaut from "../public/astronaut.png";
 import rocket from "../public/rocket.png";
+import { useState, useEffect } from "react";
 
 const Play: NextPage = () => {
+    const [device, setDevice] = useState(0);
+
+    const deviceType = () => {
+        // 0 = tablet, mobile
+        // 1 = desktop
+
+        const ua = navigator.userAgent;
+
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return 0;
+        } else if (
+            /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+                ua
+            )
+        ) {
+            return 0;
+        }
+        return 1;
+    };
+
+    useEffect(() => {
+        setDevice(deviceType());
+    });
+
     return (
         <div className={styles.container}>
             <Head>
@@ -19,7 +44,7 @@ const Play: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
+            <main className={device ? styles.main : styles.hidden}>
                 <h1 className={styles.title}>Choose a Game</h1>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
@@ -71,10 +96,12 @@ const Play: NextPage = () => {
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>
-                <br />
-                <footer className={styles.footer}>
-                    <p>RI Open House Games 2022</p>
-                </footer>
+            </main>
+
+            <main className={device ? styles.hidden : styles.main}>
+                <h1 className={styles.title}>
+                    Sorry! I only work on desktops/laptops
+                </h1>
             </main>
         </div>
     );

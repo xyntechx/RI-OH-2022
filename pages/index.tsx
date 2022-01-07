@@ -43,25 +43,24 @@ const Home: NextPage = () => {
 
             <Image src="/bg.png" alt="Earth Background" layout="fill" />
 
-            <main className={styles.main}>
-                <h1 className={device ? styles.title : styles.hidden}>
-                    Ready to Play Some Games?
-                </h1>
+            {/* For desktop */}
+            <main className={device ? styles.main : styles.hidden}>
+                <h1 className={styles.title}>Ready to Play Some Games?</h1>
                 <br />
-                <div className={styles.tooltip}>
-                    <Link href="/play">
-                        <a className={styles.button}>I&apos;m Ready!</a>
-                    </Link>
-                    <span className={styles.tooltiptext}>
-                        By pressing this button, I confirm that I am not on a
-                        mobile device as I would be unable to play the games if
-                        I were using one!
-                    </span>
-                </div>
+                <Link href="/play">
+                    <a className={styles.button}>I&apos;m Ready!</a>
+                </Link>
                 <br />
                 <footer className={styles.footer}>
                     <p>RI Open House Games 2022</p>
                 </footer>
+            </main>
+
+            {/* For mobile/tablet */}
+            <main className={device ? styles.hidden : styles.main}>
+                <h1 className={styles.title}>
+                    Sorry! I only work on desktops/laptops
+                </h1>
             </main>
         </div>
     );
