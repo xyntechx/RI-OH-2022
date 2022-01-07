@@ -31,7 +31,7 @@ const Play: NextPage = () => {
 
     useEffect(() => {
         setDevice(deviceType());
-    });
+    }, []);
 
     return (
         <div className={styles.container}>
