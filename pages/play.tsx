@@ -100,7 +100,7 @@ const Play: NextPage = () => {
 
             <main className={device ? styles.hidden : styles.main}>
                 <h1 className={styles.title}>
-                    Sorry! I only work on desktops/laptops
+                    Sorry! I only work on desktops or laptops
                 </h1>
             </main>
         </div>
