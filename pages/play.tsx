@@ -48,7 +48,7 @@ const Play: NextPage = () => {
                 <h1 className={styles.title}>Choose a Game</h1>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
-                        <Link href="https://ohgames.herokuapp.com/mem">
+                        <Link href="https://rioh22games.herokuapp.com/mem">
                             <a target="_blank">
                                 <Image
                                     src={astronaut}
@@ -63,7 +63,7 @@ const Play: NextPage = () => {
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://ohgames.herokuapp.com/tap">
+                        <Link href="https://rioh22games.herokuapp.com/tap">
                             <a target="_blank">
                                 <Image
                                     src={alien}
@@ -78,7 +78,7 @@ const Play: NextPage = () => {
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://ohgames.herokuapp.com/jig">
+                        <Link href="https://rioh22games.herokuapp.com/jig">
                             <a target="_blank">
                                 <Image
                                     src={rocket}
