@@ -38,66 +38,24 @@ const About: NextPage = () => {
                     name="description"
                     content="Raffles Institution Open House Games 2022"
                 />
-                <link rel="icon" href="/favicon.ico?v=2" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Image src="/bgplanets.jpg" alt="Earth Background" layout="fill" />
-
+            {/* For desktop */}
             <main className={device ? styles.main : styles.hidden}>
                 <h1 className={styles.title}>RI Open House 2022 Games Team</h1>
                 <br />
-                <h1 className={styles.subtitle}>Website</h1>
-                <Link href="https://github.com/xyntechx">
-                    <a target="_blank" className={styles.desc}>
-                        Nyx Iskandar 22S06G
-                    </a>
-                </Link>
-                <Link href="https://github.com/flyyee">
-                    <a target="_blank" className={styles.desc}>
-                        Gerrard Tai 22S06D
-                    </a>
-                </Link>
-                <br />
-                <h1 className={styles.subtitle}>Mad Match</h1>
-                <Link href="https://github.com/geraldnyeo">
-                    <a target="_blank" className={styles.desc}>
-                        Gerald Nyeo 22S06Q
-                    </a>
-                </Link>
-                <Link href="https://github.com/xyntechx">
-                    <a target="_blank" className={styles.desc}>
-                        Nyx Iskandar 22S06G
-                    </a>
-                </Link>
-                <br />
-                <h1 className={styles.subtitle}>Beats Strike</h1>
-                <Link href="https://github.com/flyyee">
-                    <a target="_blank" className={styles.desc}>
-                        Gerrard Tai 22S06D
-                    </a>
-                </Link>
-                <Link href="https://github.com/Lol-Hi">
-                    <a target="_blank" className={styles.desc}>
-                        Koh Luck Heng 22S06G
-                    </a>
-                </Link>
-                <br />
-                <h1 className={styles.subtitle}>Picture Perfect</h1>
-                <Link href="https://github.com/palpatinezw">
-                    <a target="_blank" className={styles.desc}>
-                        Huang Ziwen 22S06D
-                    </a>
-                </Link>
-                <Link href="https://github.com/Zeephdek">
-                    <a target="_blank" className={styles.desc}>
-                        Chang Zee Hang 22S06E
-                    </a>
-                </Link>
+                <p className={styles.desc}>Gerrard Tai (22S06D)</p>
+                <p className={styles.desc}>Huang Ziwen (22S06D)</p>
+                <p className={styles.desc}>Chang Zee Hang (22S06E)</p>
+                <p className={styles.desc}>Koh Luck Heng (22S06G)</p>
+                <p className={styles.desc}>Nyx Iskandar (22S06G)</p>
+                <p className={styles.desc}>Gerald Nyeo (22S06Q)</p>
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>
             </main>
-            
+
             {/* For mobile/tablet */}
             <main className={device ? styles.hidden : styles.main}>
                 <h1 className={styles.title}>

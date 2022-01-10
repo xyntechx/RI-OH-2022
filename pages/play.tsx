@@ -41,10 +41,8 @@ const Play: NextPage = () => {
                     name="description"
                     content="Raffles Institution Open House Games 2022"
                 />
-                <link rel="icon" href="/favicon.ico?v=2" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <Image src="/bgplanets.jpg" alt="Earth Background" layout="fill" />
 
             <main className={device ? styles.main : styles.hidden}>
                 <h1 className={styles.title}>Teleport Me to a Game</h1>
@@ -54,7 +52,7 @@ const Play: NextPage = () => {
                 </p>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-madmatch/">
+                        <Link href="https://RIOHGames22.github.io/madmatch/">
                             <a target="_blank">
                                 <Image
                                     src={astronaut}
@@ -69,7 +67,7 @@ const Play: NextPage = () => {
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-beatsstrike/">
+                        <Link href="https://RIOHGames22.github.io/beatsstrike/">
                             <a target="_blank">
                                 <Image
                                     src={alien}
@@ -84,7 +82,7 @@ const Play: NextPage = () => {
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-pictureperfect/">
+                        <Link href="https://RIOHGames22.github.io/pictureperfect/">
                             <a target="_blank">
                                 <Image
                                     src={rocket}
@@ -100,7 +98,6 @@ const Play: NextPage = () => {
                         </span>
                     </div>
                 </div>
-                <br />
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>

@@ -31,17 +31,15 @@ const Home: NextPage = () => {
     });
 
     return (
-        <div className={styles.container}>
+        <div className={styles.containerMain}>
             <Head>
                 <title>RI Open House Games 2022</title>
                 <meta
                     name="description"
                     content="Raffles Institution Open House Games 2022"
                 />
-                <link rel="icon" href="/favicon.ico?v=2" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <Image src="/bgearth.jpg" alt="Earth Background" layout="fill" />
 
             {/* For desktop */}
             <main className={device ? styles.main : styles.hidden}>
@@ -55,9 +53,10 @@ const Home: NextPage = () => {
                 <Link href="/about">
                     <a className={styles.button}>About</a>
                 </Link>
-                <br />
                 <footer className={styles.footer}>
-                    <p>RI Open House Games 2022</p>
+                    <Link href="https://openhouse.ri.edu.sg/">
+                        <a target="_blank">RI Open House Games 2022</a>
+                    </Link>
                 </footer>
             </main>
 
