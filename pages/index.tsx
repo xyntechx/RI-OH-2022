@@ -51,6 +51,9 @@ const Home: NextPage = () => {
                 <Link href="/about">
                     <a className={styles.button}>About</a>
                 </Link>
+                <p className={styles.desc}>
+                    To enter, you need to submit your score with a valid email!
+                </p>
                 <footer className={styles.footer}>
                     <Link href="https://openhouse.ri.edu.sg/">
                         <a target="_blank">RI Open House Games 2022</a>

@@ -100,6 +100,11 @@ const Play: NextPage = () => {
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>
+                <footer className={styles.footer}>
+                    <Link href="https://openhouse.ri.edu.sg/">
+                        <a target="_blank">RI Open House Games 2022</a>
+                    </Link>
+                </footer>
             </main>
         </div>
     );
