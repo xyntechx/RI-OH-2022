@@ -46,11 +46,11 @@ const Home: NextPage = () => {
             {/* For desktop */}
             <main className={device ? styles.main : styles.hidden}>
                 <h1 className={styles.title}>
-                    Will you join me on this voyage?
+                    Will You Join Me on This Voyage?
                 </h1>
                 <br />
                 <Link href="/play">
-                    <a className={styles.button}>Let&apos;s Go!</a>
+                    <a className={styles.button}>Let&apos;s Go</a>
                 </Link>
                 <Link href="/about">
                     <a className={styles.button}>About</a>
