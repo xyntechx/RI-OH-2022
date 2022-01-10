@@ -97,6 +97,13 @@ const About: NextPage = () => {
                     <a className={styles.button}>Back to Home</a>
                 </Link>
             </main>
+            
+            {/* For mobile/tablet */}
+            <main className={device ? styles.hidden : styles.main}>
+                <h1 className={styles.title}>
+                    Sorry! I only work on desktops or laptops :D
+                </h1>
+            </main>
         </div>
     );
 };
