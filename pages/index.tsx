@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
     useEffect(() => {
         setDevice(deviceType());
-    });
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -38,22 +38,17 @@ const Home: NextPage = () => {
                     name="description"
                     content="Raffles Institution Open House Games 2022"
                 />
-                <link rel="icon" href="/favicon.ico?v=2" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Image src="/bgearth.jpg" alt="Earth Background" layout="fill" />
+            <Image src="/bg.png" alt="Earth Background" layout="fill" />
 
             {/* For desktop */}
             <main className={device ? styles.main : styles.hidden}>
-                <h1 className={styles.title}>
-                    Will you join me on this voyage?
-                </h1>
+                <h1 className={styles.title}>Ready to Play Some Games?</h1>
                 <br />
                 <Link href="/play">
-                    <a className={styles.button}>Let&apos;s Go!</a>
-                </Link>
-                <Link href="/about">
-                    <a className={styles.button}>About</a>
+                    <a className={styles.button}>I&apos;m Ready!</a>
                 </Link>
                 <br />
                 <footer className={styles.footer}>
@@ -64,7 +59,7 @@ const Home: NextPage = () => {
             {/* For mobile/tablet */}
             <main className={device ? styles.hidden : styles.main}>
                 <h1 className={styles.title}>
-                    Sorry! I only work on desktops or laptops :D
+                    Sorry! I only work on desktops or laptops
                 </h1>
             </main>
         </div>

@@ -2,11 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import alien from "../public/alien.png";
 import astronaut from "../public/astronaut.png";
 import rocket from "../public/rocket.png";
+import { useState, useEffect } from "react";
 
 const Play: NextPage = () => {
     const [device, setDevice] = useState(0);
@@ -31,7 +31,7 @@ const Play: NextPage = () => {
 
     useEffect(() => {
         setDevice(deviceType());
-    });
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -41,20 +41,14 @@ const Play: NextPage = () => {
                     name="description"
                     content="Raffles Institution Open House Games 2022"
                 />
-                <link rel="icon" href="/favicon.ico?v=2" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Image src="/bgplanets.jpg" alt="Earth Background" layout="fill" />
-
             <main className={device ? styles.main : styles.hidden}>
-                <h1 className={styles.title}>Teleport me to a game</h1>
-                <p className={styles.text}>
-                    The TOP 10 players by 16th Jan (12pm) in the leaderboards
-                    will earn an exclusive pouch!
-                </p>
+                <h1 className={styles.title}>Choose a Game</h1>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-madmatch/">
+                        <Link href="https://rioh22games.herokuapp.com/mem">
                             <a target="_blank">
                                 <Image
                                     src={astronaut}
@@ -65,11 +59,11 @@ const Play: NextPage = () => {
                                 />
                             </a>
                         </Link>
-                        <span className={styles.tooltiptext}>Mad Match</span>
+                        <span className={styles.tooltiptext}>Memory</span>
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-beatsstrike/">
+                        <Link href="https://rioh22games.herokuapp.com/tap">
                             <a target="_blank">
                                 <Image
                                     src={alien}
@@ -80,11 +74,11 @@ const Play: NextPage = () => {
                                 />
                             </a>
                         </Link>
-                        <span className={styles.tooltiptext}>Beats Strike</span>
+                        <span className={styles.tooltiptext}>TapTap</span>
                     </div>
                     <br />
                     <div className={styles.tooltip}>
-                        <Link href="https://flyyee.github.io/ohg-pictureperfect/">
+                        <Link href="https://rioh22games.herokuapp.com/jig">
                             <a target="_blank">
                                 <Image
                                     src={rocket}
@@ -95,9 +89,7 @@ const Play: NextPage = () => {
                                 />
                             </a>
                         </Link>
-                        <span className={styles.tooltiptext}>
-                            Picture Perfect
-                        </span>
+                        <span className={styles.tooltiptext}>Jigsaw</span>
                     </div>
                 </div>
                 <br />
@@ -106,10 +98,9 @@ const Play: NextPage = () => {
                 </Link>
             </main>
 
-            {/* For mobile/tablet */}
             <main className={device ? styles.hidden : styles.main}>
                 <h1 className={styles.title}>
-                    Sorry! I only work on desktops or laptops :D
+                    Sorry! I only work on desktops or laptops
                 </h1>
             </main>
         </div>
