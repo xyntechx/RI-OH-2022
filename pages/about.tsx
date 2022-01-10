@@ -2,32 +2,31 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 const About: NextPage = () => {
-    const [device, setDevice] = useState(0);
-
     const deviceType = () => {
-        // 0 = tablet, mobile
-        // 1 = desktop
-
         const ua = navigator.userAgent;
 
         if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-            return 0;
+            alert(
+                "Sorry! You can only play the games on desktops or laptops, but feel free to still browse through this website!"
+            );
         } else if (
             /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
                 ua
             )
         ) {
-            return 0;
+            alert(
+                "Sorry! You can only play the games on desktops or laptops, but feel free to still browse through this website!"
+            );
         }
         return 1;
     };
 
     useEffect(() => {
-        setDevice(deviceType());
+        deviceType();
     });
 
     return (
@@ -41,8 +40,7 @@ const About: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* For desktop */}
-            <main className={device ? styles.main : styles.hidden}>
+            <main className={styles.main}>
                 <h1 className={styles.title}>RI Open House 2022 Games Team</h1>
                 <br />
                 <p className={styles.desc}>Gerrard Tai (22S06D)</p>
@@ -54,13 +52,6 @@ const About: NextPage = () => {
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>
-            </main>
-
-            {/* For mobile/tablet */}
-            <main className={device ? styles.hidden : styles.main}>
-                <h1 className={styles.title}>
-                    Sorry! I only work on desktops or laptops :D
-                </h1>
             </main>
         </div>
     );

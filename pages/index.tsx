@@ -3,31 +3,30 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
-    const [device, setDevice] = useState(0);
-
     const deviceType = () => {
-        // 0 = tablet, mobile
-        // 1 = desktop
-
         const ua = navigator.userAgent;
 
         if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-            return 0;
+            alert(
+                "Sorry! You can only play the games on desktops or laptops, but feel free to still browse through this website!"
+            );
         } else if (
             /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
                 ua
             )
         ) {
-            return 0;
+            alert(
+                "Sorry! You can only play the games on desktops or laptops, but feel free to still browse through this website!"
+            );
         }
         return 1;
     };
 
     useEffect(() => {
-        setDevice(deviceType());
+        deviceType();
     });
 
     return (
@@ -41,8 +40,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* For desktop */}
-            <main className={device ? styles.main : styles.hidden}>
+            <main className={styles.main}>
                 <h1 className={styles.title}>
                     Will You Join Me on This Voyage?
                 </h1>
@@ -58,13 +56,6 @@ const Home: NextPage = () => {
                         <a target="_blank">RI Open House Games 2022</a>
                     </Link>
                 </footer>
-            </main>
-
-            {/* For mobile/tablet */}
-            <main className={device ? styles.hidden : styles.main}>
-                <h1 className={styles.title}>
-                    Sorry! I only work on desktops or laptops :D
-                </h1>
             </main>
         </div>
     );
