@@ -47,10 +47,10 @@ const Play: NextPage = () => {
             <Image src="/bgplanets.jpg" alt="Earth Background" layout="fill" />
 
             <main className={device ? styles.main : styles.hidden}>
-                <h1 className={styles.title}>Teleport me to a game</h1>
+                <h1 className={styles.title}>Teleport Me to a Game</h1>
                 <p className={styles.text}>
                     The TOP 10 players by 16th Jan (12pm) in the leaderboards
-                    will earn an exclusive pouch!
+                    will earn an EXCLUSIVE pouch!
                 </p>
                 <div className={styles.imgContainer}>
                     <div className={styles.tooltip}>
