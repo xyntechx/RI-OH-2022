@@ -43,9 +43,32 @@
 }
 
 .title {
-    margin-bottom: 3rem;
     line-height: 1.15;
     font-size: 4rem;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+}
+
+.desc {
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+    text-decoration: underline;
+    color: #06a783;
+}
+
+.text {
+    margin-bottom: 3rem;
+    font-size: 2rem;
     text-align: center;
     z-index: 1;
 }
@@ -83,14 +106,11 @@
     border-radius: 1rem;
     z-index: 1;
     text-align: center;
+    font-size: 2rem;
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-}
-
-.tooltiptext {
-    font-size: 1rem;
 }
 
 .hidden {
