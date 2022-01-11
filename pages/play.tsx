@@ -97,6 +97,9 @@ const Play: NextPage = () => {
                         </span>
                     </div>
                 </div>
+                <p className={styles.desc}>
+                    To enter, please submit your score with a valid email!
+                </p>
                 <Link href="/">
                     <a className={styles.button}>Back to Home</a>
                 </Link>
