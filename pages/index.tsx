@@ -38,6 +38,21 @@ const Home: NextPage = () => {
                     content="Raffles Institution Open House Games 2022"
                 />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="author" content="Nyx Iskandar"></meta>
+                <meta property="og:title" content="RI Open House Games 2022" />
+                <meta
+                    property="og:description"
+                    content="Raffles Institution Open House Games 2022"
+                />
+                <meta
+                    property="og:image"
+                    content="https://ri-oh-2022.vercel.app/favicon.ico"
+                />
+                <meta
+                    property="og:url"
+                    content="https://ri-oh-2022.vercel.app/"
+                />
+                <meta property="og:type" content="website" />
             </Head>
 
             <main className={styles.main}>
