@@ -1,4 +1,4 @@
-# Bex Website
+# RI Open House 2022 Games Website
 The code for the games website of Raffles Institution's 2022 Open House!
 
 ## 🤖 Technologies
